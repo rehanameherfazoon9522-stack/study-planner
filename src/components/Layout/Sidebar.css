@@ -119,7 +119,7 @@
 }
 
 /* ============================================ */
-/* MOBILE STYLES - Menu button ALWAYS visible */
+/* MOBILE STYLES */
 /* ============================================ */
 
 .mobile-menu-btn {
@@ -131,7 +131,7 @@
 }
 
 @media (max-width: 768px) {
-  /* Menu button - force show */
+  /* Menu button */
   .mobile-menu-btn {
     display: flex !important;
     align-items: center !important;
@@ -163,7 +163,33 @@
     box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2);
   }
   
-  /* Overlay - only background blur */
+  /* Sidebar header - FORCE VISIBLE */
+  .sidebar-header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 1.5rem 1rem !important;
+  }
+  
+  .logo-container {
+    display: flex !important;
+  }
+  
+  .logo-icon {
+    display: block !important;
+  }
+  
+  .logo-text {
+    display: block !important;
+    font-size: 1.3rem !important;
+  }
+  
+  .logo-subtitle {
+    display: block !important;
+    font-size: 0.7rem !important;
+  }
+  
+  /* Overlay - background blur only */
   .mobile-overlay {
     display: block !important;
     position: fixed !important;
@@ -174,14 +200,6 @@
     background: rgba(0, 0, 0, 0.4) !important;
     backdrop-filter: blur(3px) !important;
     z-index: 1001 !important;
-  }
-  
-  .sidebar-header {
-    padding: 1.5rem 1rem;
-  }
-  
-  .logo-text {
-    font-size: 1.3rem;
   }
   
   .nav-item {

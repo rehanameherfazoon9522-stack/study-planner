@@ -1,0 +1,158 @@
+.timer-container {
+  background: var(--bg-card);
+  border-radius: 30px;
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.timer-container:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.timer-header {
+  margin-bottom: 1.5rem;
+}
+
+.timer-header h3 {
+  font-size: 1.3rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.session-count {
+  background: var(--gradient-purple);
+  padding: 5px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.timer-mode-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.mode-btn {
+  padding: 0.5rem 1.5rem;
+  border: 2px solid var(--border);
+  border-radius: 25px;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.mode-btn.active {
+  background: var(--gradient-pink);
+  color: white;
+  border-color: transparent;
+  transform: scale(1.05);
+}
+
+.mode-btn:hover {
+  transform: scale(1.05);
+}
+
+.timer-display {
+  margin: 2rem 0;
+}
+
+.timer-circle {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  background: var(--gradient-pink);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.timer-time {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: white;
+  font-family: monospace;
+}
+
+.timer-label {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.9);
+  margin-top: 0.5rem;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.timer-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.timer-btn.start {
+  background: var(--gradient-pink);
+  color: white;
+}
+
+.timer-btn.pause {
+  background: #f39c12;
+  color: white;
+}
+
+.timer-btn.reset {
+  background: var(--gradient-purple);
+  color: white;
+}
+
+.timer-btn:hover {
+  transform: scale(1.05);
+}
+
+.timer-tip {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .timer-circle {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .timer-time {
+    font-size: 2.5rem;
+  }
+  
+  .timer-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,109 @@
+.notes-section {
+  width: 100%;
+}
+
+.add-note-btn {
+  background: var(--gradient-pink);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.note-form {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid var(--border);
+}
+
+.note-input, .note-textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: inherit;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.save-btn, .cancel-btn {
+  padding: 8px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: var(--gradient-pink);
+  color: white;
+  border: none;
+}
+
+.cancel-btn {
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.note-card {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 1rem;
+  border: 2px solid var(--border);
+  transition: all 0.3s ease;
+}
+
+.note-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+.note-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.delete-note-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.note-content {
+  color: var(--text-secondary);
+  margin: 0.5rem 0;
+}
+
+.note-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.empty-notes {
+  text-align: center;
+  padding: 3rem;
+  background: var(--bg-card);
+  border-radius: 20px;
+  color: var(--text-secondary);
+}

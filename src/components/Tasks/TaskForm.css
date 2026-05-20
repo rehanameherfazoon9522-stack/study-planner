@@ -1,0 +1,65 @@
+.task-form {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 1.5rem;
+  border: 2px solid var(--border);
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.task-input, .task-select {
+  flex: 1;
+  padding: 0.75rem;
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.task-input:focus, .task-select:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px rgba(255, 158, 181, 0.1);
+}
+
+.add-task-btn {
+  background: var(--gradient-pink);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.add-task-btn:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+  
+  .add-task-btn {
+    justify-content: center;
+  }
+}

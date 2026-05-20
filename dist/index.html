@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>frontend</title>
+    <style>
+  /* Critical fix - runs immediately */
+  @media (max-width: 768px) {
+    body {
+      padding-top: 0;
+      margin-top: 0;
+    }
+    .main-content {
+      padding-top: 80px !important;
+    }
+  }
+</style>
+    <script type="module" crossorigin src="/assets/index-BrMWwMXP.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-C9elOC8N.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+  // Simple fix for mobile - ensures content is below navbar
+  if (window.innerWidth <= 768) {
+    window.addEventListener('load', function() {
+      var navbar = document.querySelector('.navbar');
+      var mainContent = document.querySelector('.main-content');
+      if (navbar && mainContent) {
+        mainContent.style.paddingTop = navbar.offsetHeight + 'px';
+      }
+    });
+  }
+</script>
+<script>
+  // Force mobile sidebar and navbar fix
+  (function() {
+    if (window.innerWidth <= 768) {
+      // Fix navbar overlap
+      function fixNavbar() {
+        var navbar = document.querySelector('.navbar');
+        var mainContent = document.querySelector('.main-content');
+        if (navbar && mainContent) {
+          mainContent.style.paddingTop = (navbar.offsetHeight + 10) + 'px';
+        }
+      }
+      
+      // Run after load and after any re-renders
+      window.addEventListener('load', fixNavbar);
+      setTimeout(fixNavbar, 100);
+      setTimeout(fixNavbar, 500);
+      setTimeout(fixNavbar, 1000);
+      
+      // Fix sidebar button
+      function ensureSidebarButton() {
+        var existingBtn = document.querySelector('.mobile-menu-btn');
+        if (!existingBtn) {
+          console.log('Mobile menu button not found');
+        }
+      }
+      ensureSidebarButton();
+    }
+  })();
+</script>
+  </body>
+</html>

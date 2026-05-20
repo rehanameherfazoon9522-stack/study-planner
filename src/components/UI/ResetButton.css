@@ -1,0 +1,19 @@
+.reset-button {
+  background: linear-gradient(135deg, #ff9eb5, #ff6b8a);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.reset-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 107, 138, 0.4);
+}

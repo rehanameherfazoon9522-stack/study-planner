@@ -1,0 +1,112 @@
+.task-card {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border);
+  margin-bottom: 1rem;
+  animation: slideIn 0.3s ease;
+}
+
+.task-card:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow);
+}
+
+.task-card.completed {
+  opacity: 0.7;
+  background: var(--bg-primary);
+}
+
+.task-checkbox {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--accent-primary);
+  padding: 4px;
+  transition: all 0.3s ease;
+}
+
+.task-checkbox:hover {
+  transform: scale(1.1);
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.task-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.task-card.completed .task-title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.task-priority {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.task-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.task-subject, .task-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.task-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  padding: 4px;
+}
+
+.task-delete:hover {
+  color: #e74c3c;
+  transform: scale(1.1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

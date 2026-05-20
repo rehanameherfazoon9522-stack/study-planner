@@ -1,0 +1,73 @@
+.schedule-container {
+  width: 100%;
+}
+
+.add-schedule-btn {
+  background: var(--gradient-pink);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.schedule-form {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.schedule-form input, .schedule-form select {
+  padding: 0.5rem;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg-primary);
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.schedule-day {
+  background: var(--bg-card);
+  border-radius: 15px;
+  padding: 1rem;
+  border: 2px solid var(--border);
+}
+
+.schedule-day h4 {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: var(--bg-primary);
+  border-radius: 10px;
+}
+
+.schedule-item.completed {
+  opacity: 0.6;
+  text-decoration: line-through;
+}
+
+.schedule-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}

@@ -115,12 +115,13 @@
   
   .welcome-section h2 {
     font-size: 0.85rem;
-    text-align: left;
+    text-align: center;
   }
   
   .motivation-badge {
     font-size: 0.6rem;
     padding: 3px 8px;
+    text-align: center;
   }
   
   .nav-actions {
@@ -130,6 +131,8 @@
   .theme-toggle {
     padding: 4px 8px;
     font-size: 0.65rem;
+    min-width: 46px;
+    min-height: min-content;
   }
   
   .study-streak {

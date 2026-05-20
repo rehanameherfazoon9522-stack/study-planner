@@ -296,6 +296,7 @@
   .welcome-banner {
     padding: 1.2rem;
     margin-bottom: 1.5rem;
+     margin: 12px 5px 15px !important;
   }
   
   .welcome-text h1 {
@@ -373,6 +374,8 @@
     max-width: 100%;
     overflow-x: hidden;
     padding: 0 8px;
+    margin-top: 8px !important;
+    margin: auto;
   }
   
   .stats-grid {

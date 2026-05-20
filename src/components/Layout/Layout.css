@@ -50,6 +50,7 @@
   
   .page-content {
     padding: 15px;
+    /* Remove padding-top - let index.css handle it */
   }
 }
 

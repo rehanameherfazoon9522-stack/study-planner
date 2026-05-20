@@ -102,8 +102,7 @@
 @media (max-width: 768px) {
   .navbar {
     position: relative;
-    padding: 10px 16px;
-    padding-left: 45px;
+    padding: 10px 16px 10px 45px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
@@ -115,11 +114,14 @@
   }
   
   .motivation-badge {
-    display: none;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+    display: flex;
   }
   
   .nav-actions {
     gap: 5px;
+    margin-left: 30px;
   }
   
   .theme-toggle {
@@ -127,10 +129,11 @@
     min-height: min-content !important;
     padding: 5px 8px !important;
     font-size: 0.6rem !important;
+    width: 100px !important;
   }
   
   .theme-toggle span {
-    display: none;
+    display: ruby-text;
   }
   
   .study-streak {

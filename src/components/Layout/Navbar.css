@@ -95,6 +95,10 @@
   50% { transform: translateY(-3px); }
 }
 
+/* ============================================ */
+/* MOBILE ONLY - Phone styles (No duplicate) */
+/* ============================================ */
+
 @media (max-width: 768px) {
   .navbar {
     position: relative;
@@ -118,7 +122,6 @@
     gap: 5px;
   }
   
-  /* Theme toggle - exactly as you did */
   .theme-toggle {
     min-width: 46px !important;
     min-height: min-content !important;
@@ -137,5 +140,12 @@
   
   .streak-count {
     padding: 1px 3px;
+  }
+}
+
+/* Laptop styles - No change */
+@media (min-width: 769px) {
+  .navbar {
+    position: sticky;
   }
 }

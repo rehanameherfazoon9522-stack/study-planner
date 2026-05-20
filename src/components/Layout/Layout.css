@@ -42,15 +42,15 @@
 /* ============================================ */
 /* MOBILE ONLY - Phone styles */
 /* ============================================ */
-
 @media (max-width: 768px) {
   .main-content {
     margin-left: 0;
+    padding-top: 0 !important;
   }
   
   .page-content {
-    padding: 15px;
-    /* Remove padding-top - let index.css handle it */
+    padding: 0.5rem;
+    padding-top: 0 !important;
   }
 }
 

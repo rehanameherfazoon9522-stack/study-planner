@@ -199,28 +199,41 @@
 }
 
 /* ============================================ */
-/* MOBILE FIXES - EXACTLY AS YOU DID */
+/* MOBILE FIXES - Clean, no duplicates */
 /* ============================================ */
 
 @media (max-width: 768px) {
+  /* Page container - remove gaps */
   .page-container {
-    margin-top: 8px !important;
-    margin: auto !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
     padding: 0 8px !important;
   }
   
+  /* Welcome banner - proper spacing */
   .welcome-banner {
-    margin: 12px 5px 15px !important;
+    margin: 0 !important;
+    margin-top: 5px !important;
     padding: 12px !important;
     flex-direction: column !important;
     text-align: center !important;
   }
   
-  .welcome-section {
-    text-align: center !important;
-    margin-left: 40px !important;
+  .welcome-text h1 {
+    font-size: 1.1rem !important;
+    color: rgb(210, 81, 102) !important;
   }
   
+  .welcome-text p {
+    font-size: 0.8rem !important;
+  }
+  
+  .welcome-emoji svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  
+  /* Stats grid - 2 columns */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 8px !important;
@@ -230,13 +243,70 @@
     padding: 10px !important;
   }
   
+  .stats-icon {
+    width: 35px !important;
+    height: 35px !important;
+  }
+  
+  .stats-value {
+    font-size: 1.2rem !important;
+  }
+  
+  .stats-info h3 {
+    font-size: 0.7rem !important;
+  }
+  
+  /* Dashboard grid - 1 column */
   .dashboard-grid {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
   }
   
+  /* Timer */
   .timer-circle {
     width: 140px !important;
     height: 140px !important;
+  }
+  
+  .timer-time {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Page title */
+  .page-title {
+    font-size: 1.3rem !important;
+  }
+  
+  /* Settings */
+  .settings-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .name-input-group {
+    flex-direction: column !important;
+  }
+  
+  .save-name-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 480px) {
+  .stats-grid {
+    gap: 6px !important;
+  }
+  
+  .stats-card {
+    padding: 6px !important;
+  }
+  
+  .stats-value {
+    font-size: 1rem !important;
+  }
+  
+  .welcome-text h1 {
+    font-size: 1rem !important;
   }
 }

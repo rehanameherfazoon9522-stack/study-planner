@@ -140,7 +140,7 @@
   
   .sidebar.mobile-open {
     transform: translateX(0);
-    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.2) 13px 8px 15px 0px;
   }
   
   .mobile-menu-btn {

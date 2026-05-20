@@ -213,11 +213,13 @@
   
   /* Welcome banner - proper spacing */
   .welcome-banner {
-    margin-top: 5px !important;
+    
     
     padding: 12px !important;
+    margin-top: 8px !important;
     flex-direction: column !important;
     text-align: center !important;
+
   }
   
   .welcome-text h1 {

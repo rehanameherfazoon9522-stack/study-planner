@@ -505,3 +505,30 @@ body {
     font-size: 0.8rem !important;
   }
 }
+/* ============================================ */
+/* SIMPLE MOBILE FIX - Only for phones */
+/* ============================================ */
+
+@media (max-width: 768px) {
+  /* Fix navbar - center content, add space for menu button */
+  .navbar {
+    padding-left: 45px !important;
+    justify-content: center !important;
+    position: relative !important;
+  }
+  
+  /* Welcome text centered */
+  .welcome-section {
+    text-align: center !important;
+  }
+  
+  /* Fix main content - no extra padding at top */
+  .main-content {
+    padding-top: 0 !important;
+  }
+  
+  /* Welcome banner - normal spacing */
+  .welcome-banner {
+    margin-top: 0 !important;
+  }
+}

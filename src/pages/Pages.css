@@ -199,41 +199,41 @@
 }
 
 /* ============================================ */
-/* MOBILE FIXES - Exactly as your screenshot */
+/* MOBILE FIXES - EXACTLY AS YOU DID */
 /* ============================================ */
 
 @media (max-width: 768px) {
-  /* Page container - margin top 8px */
+  /* Page container - margin top 8px and auto */
   .page-container {
     margin-top: 8px !important;
+    margin: auto !important;
     padding: 0 8px !important;
   }
   
-  /* Welcome banner - left margin 40px to avoid menu button */
+  /* Welcome banner - margin exactly as your screenshot */
   .welcome-banner {
-    margin-left: 40px !important;
     margin-top: 5px !important;
-    margin-bottom: 15px !important;
+    margin: 12px 5px 15px !important;
     padding: 12px !important;
     flex-direction: column !important;
     text-align: center !important;
   }
   
+  /* Welcome section - text center and left margin 40px */
+  .welcome-section {
+    text-align: center !important;
+    margin-left: 40px !important;
+  }
+  
   .welcome-text h1 {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
     color: rgb(210, 81, 102) !important;
   }
   
   .welcome-text p {
-    font-size: 0.8rem !important;
+    font-size: 0.85rem !important;
   }
   
-  .welcome-emoji svg {
-    width: 30px !important;
-    height: 30px !important;
-  }
-  
-  /* Stats grid - 2 columns */
   .stats-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 8px !important;
@@ -252,17 +252,11 @@
     font-size: 1.2rem !important;
   }
   
-  .stats-info h3 {
-    font-size: 0.7rem !important;
-  }
-  
-  /* Dashboard grid - 1 column */
   .dashboard-grid {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
   }
   
-  /* Timer */
   .timer-circle {
     width: 140px !important;
     height: 140px !important;
@@ -287,28 +281,5 @@
   .save-name-btn {
     width: 100% !important;
     justify-content: center !important;
-  }
-}
-
-/* Very small phones */
-@media (max-width: 480px) {
-  .welcome-banner {
-    margin-left: 35px !important;
-  }
-  
-  .welcome-text h1 {
-    font-size: 1rem !important;
-  }
-  
-  .stats-grid {
-    gap: 6px !important;
-  }
-  
-  .stats-card {
-    padding: 6px !important;
-  }
-  
-  .stats-value {
-    font-size: 1rem !important;
   }
 }

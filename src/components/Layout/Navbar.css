@@ -95,10 +95,6 @@
   50% { transform: translateY(-3px); }
 }
 
-/* ============================================ */
-/* MOBILE ONLY - Phone styles */
-/* ============================================ */
-
 @media (max-width: 768px) {
   .navbar {
     position: relative;
@@ -122,10 +118,12 @@
     gap: 5px;
   }
   
+  /* Theme toggle - exactly as you did */
   .theme-toggle {
-    padding: 5px 8px;
-    font-size: 0.6rem;
-    min-width: 38px;
+    min-width: 46px !important;
+    min-height: min-content !important;
+    padding: 5px 8px !important;
+    font-size: 0.6rem !important;
   }
   
   .theme-toggle span {
@@ -139,32 +137,5 @@
   
   .streak-count {
     padding: 1px 3px;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar {
-    padding-left: 40px;
-    padding: 6px 10px;
-  }
-  
-  .welcome-section h2 {
-    font-size: 0.7rem;
-  }
-  
-  .theme-toggle {
-    padding: 4px 6px;
-  }
-  
-  .study-streak {
-    padding: 3px 5px;
-    font-size: 0.5rem;
-  }
-}
-
-/* Laptop styles unchanged */
-@media (min-width: 769px) {
-  .navbar {
-    position: sticky;
   }
 }

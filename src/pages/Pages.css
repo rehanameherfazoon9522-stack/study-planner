@@ -203,35 +203,22 @@
 /* ============================================ */
 
 @media (max-width: 768px) {
-  /* Page container - margin top 8px and auto */
   .page-container {
     margin-top: 8px !important;
     margin: auto !important;
     padding: 0 8px !important;
   }
   
-  /* Welcome banner - margin exactly as your screenshot */
   .welcome-banner {
-    margin-top: 5px !important;
     margin: 12px 5px 15px !important;
     padding: 12px !important;
     flex-direction: column !important;
     text-align: center !important;
   }
   
-  /* Welcome section - text center and left margin 40px */
   .welcome-section {
     text-align: center !important;
     margin-left: 40px !important;
-  }
-  
-  .welcome-text h1 {
-    font-size: 1.2rem !important;
-    color: rgb(210, 81, 102) !important;
-  }
-  
-  .welcome-text p {
-    font-size: 0.85rem !important;
   }
   
   .stats-grid {
@@ -243,15 +230,6 @@
     padding: 10px !important;
   }
   
-  .stats-icon {
-    width: 35px !important;
-    height: 35px !important;
-  }
-  
-  .stats-value {
-    font-size: 1.2rem !important;
-  }
-  
   .dashboard-grid {
     grid-template-columns: 1fr !important;
     gap: 12px !important;
@@ -260,26 +238,5 @@
   .timer-circle {
     width: 140px !important;
     height: 140px !important;
-  }
-  
-  .timer-time {
-    font-size: 1.3rem !important;
-  }
-  
-  .page-title {
-    font-size: 1.3rem !important;
-  }
-  
-  .settings-grid {
-    grid-template-columns: 1fr !important;
-  }
-  
-  .name-input-group {
-    flex-direction: column !important;
-  }
-  
-  .save-name-btn {
-    width: 100% !important;
-    justify-content: center !important;
   }
 }

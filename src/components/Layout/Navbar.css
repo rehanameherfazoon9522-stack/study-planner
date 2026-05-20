@@ -96,71 +96,57 @@
 }
 
 /* ============================================ */
-/* MOBILE FIXES - Menu button on same line */
+/* MOBILE FIX - Phone only */
 /* ============================================ */
 
 @media (max-width: 768px) {
   .navbar {
-    position: relative !important;
-    padding: 10px 15px 10px 15px !important;
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    flex-wrap: nowrap !important;
-  }
-  
-  /* Welcome section takes most space */
-  .welcome-section {
-    flex: 1 !important;
-    text-align: center !important;
+    position: relative;
+    padding: 10px 15px;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
   }
   
   .welcome-section h2 {
-    font-size: 0.9rem !important;
-    white-space: nowrap !important;
+    font-size: 0.85rem;
+    white-space: nowrap;
   }
   
   .motivation-badge {
-    display: none !important; /* Hide on mobile to save space */
-  }
-  
-  .nav-actions {
-    justify-content: flex-end !important;
-    gap: 5px !important;
+    display: none;
   }
   
   .theme-toggle {
-    padding: 5px 8px !important;
-    font-size: 0.65rem !important;
+    padding: 5px 8px;
+    font-size: 0.65rem;
+  }
+  
+  .theme-toggle span {
+    display: none;
   }
   
   .study-streak {
-    padding: 5px 8px !important;
-    font-size: 0.6rem !important;
+    padding: 5px 8px;
+    font-size: 0.6rem;
   }
   
   .streak-count {
-    padding: 1px 4px !important;
+    padding: 1px 4px;
   }
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    padding: 8px 12px !important;
-  }
-  
   .welcome-section h2 {
-    font-size: 0.8rem !important;
+    font-size: 0.75rem;
   }
   
   .theme-toggle {
-    padding: 4px 6px !important;
-    font-size: 0.6rem !important;
+    padding: 4px 6px;
   }
   
   .study-streak {
-    padding: 4px 6px !important;
-    font-size: 0.55rem !important;
+    padding: 4px 6px;
+    font-size: 0.55rem;
   }
 }

@@ -3,65 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <!-- Cache clear meta tags -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>Study Planner | Cute Productivity App</title>
     <style>
-  /* Critical fix - runs immediately */
-  @media (max-width: 768px) {
-    body {
-      padding-top: 0;
-      margin-top: 0;
-    }
-    .main-content {
-      padding-top: 80px !important;
-    }
-  }
-</style>
+      /* Critical CSS - loads immediately */
+      @media (max-width: 768px) {
+        .page-container {
+          margin-top: 8px !important;
+        }
+        .welcome-banner {
+          margin: 12px 5px 15px !important;
+        }
+        .welcome-section {
+          margin-left: 40px !important;
+          text-align: center !important;
+        }
+        .theme-toggle {
+          min-width: 46px !important;
+          min-height: min-content !important;
+        }
+        .theme-toggle span {
+          display: none !important;
+        }
+        .main-content {
+          padding-top: 0 !important;
+        }
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <script type="module" src="/src/main.jsx?v=2"></script>
     <script>
-  // Simple fix for mobile - ensures content is below navbar
-  if (window.innerWidth <= 768) {
-    window.addEventListener('load', function() {
-      var navbar = document.querySelector('.navbar');
-      var mainContent = document.querySelector('.main-content');
-      if (navbar && mainContent) {
-        mainContent.style.paddingTop = navbar.offsetHeight + 'px';
-      }
-    });
-  }
-</script>
-<script>
-  // Force mobile sidebar and navbar fix
-  (function() {
-    if (window.innerWidth <= 768) {
-      // Fix navbar overlap
-      function fixNavbar() {
-        var navbar = document.querySelector('.navbar');
-        var mainContent = document.querySelector('.main-content');
-        if (navbar && mainContent) {
-          mainContent.style.paddingTop = (navbar.offsetHeight + 10) + 'px';
+      // Force mobile fixes
+      (function() {
+        if (window.innerWidth <= 768) {
+          function applyFixes() {
+            // Fix navbar overlap
+            var navbar = document.querySelector('.navbar');
+            var mainContent = document.querySelector('.main-content');
+            if (navbar && mainContent) {
+              mainContent.style.paddingTop = '0px';
+            }
+            
+            // Fix welcome banner
+            var welcomeBanner = document.querySelector('.welcome-banner');
+            if (welcomeBanner) {
+              welcomeBanner.style.margin = '12px 5px 15px';
+            }
+            
+            // Fix welcome section
+            var welcomeSection = document.querySelector('.welcome-section');
+            if (welcomeSection) {
+              welcomeSection.style.marginLeft = '40px';
+              welcomeSection.style.textAlign = 'center';
+            }
+          }
+          
+          window.addEventListener('load', applyFixes);
+          setTimeout(applyFixes, 100);
+          setTimeout(applyFixes, 500);
         }
-      }
-      
-      // Run after load and after any re-renders
-      window.addEventListener('load', fixNavbar);
-      setTimeout(fixNavbar, 100);
-      setTimeout(fixNavbar, 500);
-      setTimeout(fixNavbar, 1000);
-      
-      // Fix sidebar button
-      function ensureSidebarButton() {
-        var existingBtn = document.querySelector('.mobile-menu-btn');
-        if (!existingBtn) {
-          console.log('Mobile menu button not found');
-        }
-      }
-      ensureSidebarButton();
-    }
-  })();
-</script>
+      })();
+    </script>
   </body>
 </html>

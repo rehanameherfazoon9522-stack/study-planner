@@ -360,19 +360,21 @@ body {
 /* ============================================ */
 
 @media (max-width: 768px) {
+  /* Remove extra space above navbar */
+  body {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
   .layout {
-    display: block;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
   }
   
   .main-content {
-    margin-left: 0;
-    padding-top: 0;
+    padding-top: 0 !important;
   }
-  
-  .page-content {
-    padding: 1rem;
-  }
-  
+}
   /* FIXED: Added left padding for menu button space */
   .navbar {
     position: relative !important;
@@ -480,7 +482,7 @@ body {
     background: rgba(0,0,0,0.5) !important;
     z-index: 1001 !important;
   }
-}
+
 
 @media (max-width: 480px) {
   .stats-grid {

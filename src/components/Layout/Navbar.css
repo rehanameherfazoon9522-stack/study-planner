@@ -96,59 +96,71 @@
 }
 
 /* ============================================ */
-/* MOBILE FIX - Navbar fixed on top */
+/* MOBILE FIXES - Menu button on same line */
 /* ============================================ */
 
 @media (max-width: 768px) {
   .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px 16px;
-    padding-left: 55px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+    position: relative !important;
+    padding: 10px 15px 10px 15px !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    flex-wrap: nowrap !important;
+  }
+  
+  /* Welcome section takes most space */
+  .welcome-section {
+    flex: 1 !important;
+    text-align: center !important;
   }
   
   .welcome-section h2 {
-    font-size: 0.85rem;
-    text-align: left;
+    font-size: 0.9rem !important;
+    white-space: nowrap !important;
   }
   
   .motivation-badge {
-    font-size: 0.6rem;
-    padding: 3px 8px;
+    display: none !important; /* Hide on mobile to save space */
   }
   
   .nav-actions {
-    gap: 6px;
+    justify-content: flex-end !important;
+    gap: 5px !important;
   }
   
   .theme-toggle {
-    padding: 4px 8px;
-    font-size: 0.65rem;
+    padding: 5px 8px !important;
+    font-size: 0.65rem !important;
   }
   
   .study-streak {
-    padding: 4px 8px;
-    font-size: 0.6rem;
+    padding: 5px 8px !important;
+    font-size: 0.6rem !important;
   }
   
   .streak-count {
-    padding: 1px 4px;
+    padding: 1px 4px !important;
   }
 }
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 8px 12px;
-    padding-left: 50px;
+    padding: 8px 12px !important;
   }
   
   .welcome-section h2 {
-    font-size: 0.75rem;
+    font-size: 0.8rem !important;
+  }
+  
+  .theme-toggle {
+    padding: 4px 6px !important;
+    font-size: 0.6rem !important;
+  }
+  
+  .study-streak {
+    padding: 4px 6px !important;
+    font-size: 0.55rem !important;
   }
 }

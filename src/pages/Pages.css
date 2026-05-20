@@ -205,15 +205,16 @@
 @media (max-width: 768px) {
   /* Page container - remove gaps */
   .page-container {
-    margin-top: 0 !important;
     padding-top: 0 !important;
-    padding: 0 8px !important;
+    padding: 5px 8px !important;
+    margin-top: 5px !important;
+
   }
   
   /* Welcome banner - proper spacing */
   .welcome-banner {
-    margin: 0 !important;
     margin-top: 5px !important;
+    
     padding: 12px !important;
     flex-direction: column !important;
     text-align: center !important;

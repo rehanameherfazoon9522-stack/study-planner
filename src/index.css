@@ -7,6 +7,7 @@
 }
 
 :root {
+  /* Light Mode - Soft Baby Pink Theme */
   --bg-primary: #fff5f8;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
@@ -54,6 +55,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Animations */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
@@ -69,6 +71,7 @@ body {
   50% { transform: scale(1.05); }
 }
 
+/* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -80,455 +83,194 @@ body {
   background: var(--accent-primary);
   border-radius: 10px;
 }
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
+}
 
 ::selection {
   background: var(--accent-primary);
   color: white;
 }
 
+/* Remove blue highlight on touch */
 * {
   -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none;
 }
 
 /* ============================================ */
-/* LAPTOP STYLES */
+/* LAPTOP STYLES (Default - no changes needed) */
 /* ============================================ */
 
-.navbar {
-  background: var(--bg-secondary);
-  padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 2px solid var(--border);
-  position: relative;
-  z-index: 100;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-.welcome-section h2 {
-  font-size: 1.3rem;
-  font-weight: 600;
-  background: var(--gradient-pink);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.motivation-badge {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  background: var(--bg-primary);
-  padding: 5px 12px;
-  border-radius: 20px;
-  width: fit-content;
-}
-
-.nav-actions {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-
-.theme-toggle {
-  background: var(--bg-primary);
-  border: 1px solid var(--border);
-  padding: 8px 16px;
-  border-radius: 25px;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-.study-streak {
-  background: var(--gradient-purple);
-  padding: 8px 16px;
-  border-radius: 25px;
-  color: white;
-  font-size: 0.85rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.layout {
-  display: flex;
-  min-height: 100vh;
-}
-
-.main-content {
-  flex: 1;
-  margin-left: 280px;
-  min-height: 100vh;
-}
-
-.page-content {
-  padding: 2rem;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.welcome-banner {
-  background: var(--gradient-pink);
-  border-radius: 20px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: var(--shadow);
-}
-
-.welcome-text h1 {
-  font-size: 1.8rem;
-  color: #2d1b2e;
-  font-weight: 700;
-}
-
-.welcome-text p {
-  color: #4a3b52;
-  font-weight: 500;
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.stats-card {
-  background: var(--bg-card);
-  border-radius: 20px;
-  padding: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  border: 2px solid var(--border);
-  transition: all 0.3s ease;
-}
-
-.stats-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow);
-}
-
-.stats-icon {
-  width: 50px;
-  height: 50px;
-  background: var(--gradient-pink);
-  border-radius: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.stats-info h3 {
-  font-size: 0.875rem;
-  color: var(--text-secondary);
-}
-
-.stats-value {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.progress-container {
-  background: var(--bg-card);
-  border-radius: 20px;
-  padding: 1.5rem;
-  border: 2px solid var(--border);
-}
-
-.progress-bar {
-  height: 12px;
-  background: var(--bg-primary);
-  border-radius: 10px;
-  overflow: hidden;
-  margin-top: 1rem;
-}
-
-.progress-fill {
-  height: 100%;
-  background: var(--gradient-pink);
-  border-radius: 10px;
-  transition: width 0.5s ease;
-}
-
-.timer-container {
-  background: var(--bg-card);
-  border-radius: 20px;
-  padding: 1.5rem;
-  text-align: center;
-  border: 2px solid var(--border);
-}
-
-.timer-circle {
-  width: 200px;
-  height: 200px;
-  margin: 1rem auto;
-  background: var(--gradient-pink);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.timer-time {
-  font-size: 2rem;
-  font-weight: 800;
-  color: white;
-}
-
-.sidebar {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 280px;
-  height: 100vh;
-  background: var(--bg-secondary);
-  border-right: 2px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  z-index: 1000;
-  overflow-y: auto;
-}
-
-.sidebar-header {
-  padding: 2rem 1.5rem;
-  border-bottom: 2px solid var(--border);
-  text-align: center;
-}
-
-.logo-text {
-  font-size: 1.5rem;
-  font-weight: 700;
-  background: var(--gradient-pink);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-.nav-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-  border-radius: 12px;
-  color: var(--text-secondary);
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.nav-item.active {
-  background: var(--gradient-pink);
-  color: white;
-}
-
-.nav-item:hover {
-  background: var(--gradient-pink);
-  color: white;
-  transform: translateX(5px);
-}
-
-.mobile-menu-btn {
-  display: none;
-}
-
-.mobile-overlay {
-  display: none;
-}
-
 /* ============================================ */
-/* MOBILE STYLES - Phone only */
+/* MOBILE STYLES - ONLY FOR PHONES (max-width: 768px) */
 /* ============================================ */
 
 @media (max-width: 768px) {
-  /* Remove extra space above navbar */
-  body {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-  
-  .layout {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-  
-  .main-content {
-    padding-top: 0 !important;
-  }
-}
-  /* FIXED: Added left padding for menu button space */
+  /* Fix navbar - make it fixed on top */
   .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 9999 !important;
+    background: var(--bg-secondary) !important;
+  }
+  
+  /* Push main content down below navbar */
+  .main-content {
+    padding-top: 95px !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Ensure page content doesn't add extra padding */
+  .page-content {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  /* Welcome banner positioning */
+  .welcome-banner {
+    margin-top: 0 !important;
     position: relative !important;
-    padding: 0.75rem 0.75rem 0.75rem 55px !important;
+  }
+  
+  /* Fix containers */
+  html, body, #root, .layout, .main-content, .page-container {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Stats grid - 2 columns on mobile */
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    width: 100% !important;
+  }
+  
+  /* Dashboard grid - 1 column */
+  .dashboard-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    width: 100% !important;
+  }
+  
+  /* Cards padding */
+  .stats-card, .task-card, .note-card, .settings-card,
+  .progress-container, .timer-container {
+    width: 100% !important;
+    margin: 0 0 10px 0 !important;
+    padding: 12px !important;
+  }
+  
+  /* Welcome banner adjustments */
+  .welcome-banner {
+    width: 100% !important;
+    padding: 15px !important;
+    margin: 0 0 15px 0 !important;
     flex-direction: column !important;
     text-align: center !important;
   }
   
-  .welcome-section h2 {
-    font-size: 0.9rem !important;
-    word-break: break-word !important;
-  }
-  
-  .motivation-badge {
-    font-size: 0.65rem !important;
-    margin: 5px auto !important;
-  }
-  
-  .nav-actions {
-    justify-content: center !important;
-  }
-  
-  .welcome-banner {
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
-    padding: 1rem !important;
-  }
-  
   .welcome-text h1 {
-    font-size: 1.1rem !important;
+    font-size: 1.2rem !important;
   }
   
   .welcome-text p {
     font-size: 0.8rem !important;
   }
   
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem !important;
-  }
-  
-  .stats-card {
-    padding: 0.75rem !important;
-  }
-  
-  .stats-icon {
-    width: 35px !important;
-    height: 35px !important;
-  }
-  
-  .stats-value {
-    font-size: 1.2rem !important;
-  }
-  
-  .stats-info h3 {
-    font-size: 0.7rem !important;
-  }
-  
-  .dashboard-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-  }
-  
+  /* Timer adjustments */
   .timer-circle {
-    width: 140px !important;
-    height: 140px !important;
+    width: 150px !important;
+    height: 150px !important;
+    margin: 0 auto !important;
   }
   
   .timer-time {
-    font-size: 1.3rem !important;
+    font-size: 1.5rem !important;
   }
   
-  .sidebar {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-    width: 80%;
-    max-width: 280px;
+  /* Notes and schedule grids */
+  .notes-grid, .schedule-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
   
-  .sidebar.mobile-open {
-    transform: translateX(0);
+  /* Form adjustments */
+  .task-form .form-row {
+    flex-direction: column !important;
+    gap: 10px !important;
   }
   
-  .mobile-menu-btn {
-    display: flex !important;
-    position: fixed !important;
-    top: 12px !important;
-    left: 12px !important;
-    z-index: 1002 !important;
-    background: var(--gradient-pink) !important;
-    border: none !important;
-    padding: 10px !important;
-    border-radius: 10px !important;
-    color: white !important;
-    cursor: pointer !important;
+  .task-form .form-row button {
+    width: 100% !important;
   }
   
-  .mobile-overlay {
-    display: block !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: rgba(0,0,0,0.5) !important;
-    z-index: 1001 !important;
+  .name-input-group {
+    flex-direction: column !important;
+    gap: 10px !important;
   }
+  
+  .save-name-btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+  
+  /* Better touch targets */
+  button, .nav-item, .theme-toggle, .task-checkbox,
+  .task-delete, .add-task-btn, .add-note-btn,
+  .reset-button, .mode-btn, .timer-btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  button:active, .nav-item:active,
+  .theme-toggle:active, .reset-button:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+}
 
-
+/* Very small phones */
 @media (max-width: 480px) {
-  .stats-grid {
-    gap: 0.5rem !important;
-  }
-  
-  .stats-card {
-    padding: 0.5rem !important;
+  .main-content {
+    padding-top: 85px !important;
   }
   
   .welcome-text h1 {
     font-size: 1rem !important;
   }
   
-  .navbar {
-    padding: 0.6rem 0.6rem 0.6rem 50px !important;
+  .stats-card {
+    padding: 8px !important;
   }
   
-  .welcome-section h2 {
-    font-size: 0.8rem !important;
+  .stats-value {
+    font-size: 1.1rem !important;
+  }
+  
+  .stats-icon {
+    width: 30px !important;
+    height: 30px !important;
   }
 }
+
 /* ============================================ */
-/* SIMPLE MOBILE FIX - Only for phones */
+/* LAPTOP RESTORE - Ensure laptop styles are correct */
 /* ============================================ */
 
-@media (max-width: 768px) {
-  /* Fix navbar - center content, add space for menu button */
+@media (min-width: 769px) {
   .navbar {
-    padding-left: 45px !important;
-    justify-content: center !important;
-    position: relative !important;
+    position: sticky !important;
+    top: 0 !important;
   }
   
-  /* Welcome text centered */
-  .welcome-section {
-    text-align: center !important;
-  }
-  
-  /* Fix main content - no extra padding at top */
   .main-content {
     padding-top: 0 !important;
-  }
-  
-  /* Welcome banner - normal spacing */
-  .welcome-banner {
-    margin-top: 0 !important;
   }
 }

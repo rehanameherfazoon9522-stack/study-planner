@@ -96,38 +96,44 @@
 }
 
 /* ============================================ */
-/* MOBILE FIX - Phone only */
+/* MOBILE ONLY - Phone styles */
 /* ============================================ */
 
 @media (max-width: 768px) {
   .navbar {
-    position: relative;
-    padding: 10px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px 16px;
+    padding-left: 55px;
     flex-direction: row;
     justify-content: space-between;
-    flex-wrap: nowrap;
+    align-items: center;
+    z-index: 1000;
   }
   
   .welcome-section h2 {
     font-size: 0.85rem;
-    white-space: nowrap;
+    text-align: left;
   }
   
   .motivation-badge {
-    display: none;
+    font-size: 0.6rem;
+    padding: 3px 8px;
+  }
+  
+  .nav-actions {
+    gap: 6px;
   }
   
   .theme-toggle {
-    padding: 5px 8px;
+    padding: 4px 8px;
     font-size: 0.65rem;
   }
   
-  .theme-toggle span {
-    display: none;
-  }
-  
   .study-streak {
-    padding: 5px 8px;
+    padding: 4px 8px;
     font-size: 0.6rem;
   }
   
@@ -137,16 +143,22 @@
 }
 
 @media (max-width: 480px) {
+  .navbar {
+    padding: 8px 12px;
+    padding-left: 50px;
+  }
+  
   .welcome-section h2 {
     font-size: 0.75rem;
   }
-  
-  .theme-toggle {
-    padding: 4px 6px;
-  }
-  
-  .study-streak {
-    padding: 4px 6px;
-    font-size: 0.55rem;
+}
+
+/* ============================================ */
+/* LAPTOP RESTORE - Keep laptop styles */
+/* ============================================ */
+
+@media (min-width: 769px) {
+  .navbar {
+    position: sticky;
   }
 }

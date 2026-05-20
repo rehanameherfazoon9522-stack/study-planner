@@ -101,65 +101,68 @@
 
 @media (max-width: 768px) {
   .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: relative;
     padding: 10px 16px;
-    padding-left: 55px;
+    padding-left: 45px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000;
   }
   
   .welcome-section h2 {
-    font-size: 0.85rem;
-    text-align: center;
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
   
   .motivation-badge {
-    font-size: 0.6rem;
-    padding: 3px 8px;
-    text-align: center;
+    display: none;
   }
   
   .nav-actions {
-    gap: 6px;
+    gap: 5px;
   }
   
   .theme-toggle {
-    padding: 4px 8px;
-    font-size: 0.65rem;
-    min-width: 46px;
-    min-height: min-content;
+    padding: 5px 8px;
+    font-size: 0.6rem;
+    min-width: 38px;
+  }
+  
+  .theme-toggle span {
+    display: none;
   }
   
   .study-streak {
-    padding: 4px 8px;
-    font-size: 0.6rem;
+    padding: 4px 6px;
+    font-size: 0.55rem;
   }
   
   .streak-count {
-    padding: 1px 4px;
+    padding: 1px 3px;
   }
 }
 
 @media (max-width: 480px) {
   .navbar {
-    padding: 8px 12px;
-    padding-left: 50px;
+    padding-left: 40px;
+    padding: 6px 10px;
   }
   
   .welcome-section h2 {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+  }
+  
+  .theme-toggle {
+    padding: 4px 6px;
+  }
+  
+  .study-streak {
+    padding: 3px 5px;
+    font-size: 0.5rem;
   }
 }
 
-/* ============================================ */
-/* LAPTOP RESTORE - Keep laptop styles */
-/* ============================================ */
-
+/* Laptop styles unchanged */
 @media (min-width: 769px) {
   .navbar {
     position: sticky;

@@ -24,7 +24,6 @@
   font-size: 1rem;
 }
 
-/* FIX 1: Made welcome banner text MUCH darker and more readable */
 .welcome-banner {
   background: var(--gradient-pink);
   border-radius: 20px;
@@ -33,7 +32,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #2d1b2e; /* Darker text color instead of white */
+  color: #2d1b2e;
   animation: float 3s ease-in-out infinite;
   box-shadow: var(--shadow);
 }
@@ -41,12 +40,12 @@
 .welcome-text h1 {
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  color: rgb(210, 81, 102); /* Darker heading */
+  color: rgb(210, 81, 102);
   font-weight: 700;
 }
 
 .welcome-text p {
-  color: #4a3b52; /* Darker subtitle */
+  color: #4a3b52;
   font-weight: 500;
 }
 
@@ -55,7 +54,6 @@
   color: rgb(210, 81, 102);
 }
 
-/* Dark mode fix for welcome banner */
 [data-theme="dark"] .welcome-banner {
   color: #ffffff;
 }
@@ -99,10 +97,6 @@
   border: 2px dashed var(--border);
 }
 
-.empty-state p {
-  margin: 0.5rem 0;
-}
-
 .celebration-banner {
   text-align: center;
   padding: 1rem;
@@ -120,11 +114,6 @@
   padding: 1.5rem;
   text-align: center;
   margin-top: 2rem;
-}
-
-.encouragement-card h3 {
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
 }
 
 .settings-grid {
@@ -155,18 +144,6 @@
   border-bottom: 2px solid var(--border);
 }
 
-.settings-card-header h3 {
-  font-size: 1.2rem;
-  color: var(--text-primary);
-}
-
-.settings-content label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
 .name-input-group {
   display: flex;
   gap: 1rem;
@@ -181,12 +158,6 @@
   background: var(--bg-primary);
   color: var(--text-primary);
   font-size: 1rem;
-  font-family: inherit;
-}
-
-.settings-input:focus {
-  outline: none;
-  border-color: var(--accent-primary);
 }
 
 .save-name-btn {
@@ -227,313 +198,117 @@
   border-bottom: 1px solid var(--border);
 }
 
-.tips-list li:last-child {
-  border-bottom: none;
-}
-
-/* FIX 2 & 3: Completely fixed mobile sidebar - no scrolling, better visibility */
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 1.5rem;
-  }
-  
-  .welcome-banner {
-    flex-direction: column;
-    text-align: center;
-    padding: 1.5rem;
-  }
-  
-  .welcome-text h1 {
-    font-size: 1.3rem;
-  }
-  
-  .stats-grid {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-  }
-  
-  .settings-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .name-input-group {
-    flex-direction: column;
-  }
-  
-  .save-name-btn {
-    justify-content: center;
-  }
-  
-  /* Fix for mobile body scroll when sidebar is open */
-  body.menu-open {
-    overflow: hidden;
-    position: fixed;
-    width: 100%;
-  }
-}
-
-/* Small phone adjustments */
-@media (max-width: 480px) {
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-  
-  .dashboard-grid {
-    gap: 1rem;
-  }
-  
-  .page-content {
-    padding: 0.75rem;
-  }
-}
 /* ============================================ */
-/* MOBILE FIXES - Welcome text visibility */
+/* MOBILE FIXES - Exactly as your screenshot */
 /* ============================================ */
 
 @media (max-width: 768px) {
-  /* Fix 1: Make welcome text darker and more readable on mobile */
+  /* Page container - margin top 8px */
+  .page-container {
+    margin-top: 8px !important;
+    padding: 0 8px !important;
+  }
+  
+  /* Welcome banner - left margin 40px to avoid menu button */
   .welcome-banner {
-    padding: 1.2rem;
-    margin-bottom: 1.5rem;
-     margin: 12px 5px 15px !important;
+    margin-left: 40px !important;
+    margin-top: 5px !important;
+    margin-bottom: 15px !important;
+    padding: 12px !important;
+    flex-direction: column !important;
+    text-align: center !important;
   }
   
   .welcome-text h1 {
-    font-size: 1.2rem;
+    font-size: 1.1rem !important;
     color: rgb(210, 81, 102) !important;
-    font-weight: 700 !important;
   }
   
   .welcome-text p {
-    font-size: 0.85rem;
-    color: #4a3b52 !important;
-    font-weight: 500 !important;
-  }
-  
-  /* Dark mode fix for mobile */
-  [data-theme="dark"] .welcome-text h1 {
-    color: #ffffff !important;
-  }
-  
-  [data-theme="dark"] .welcome-text p {
-    color: #ebd5eb !important;
+    font-size: 0.8rem !important;
   }
   
   .welcome-emoji svg {
-    width: 36px;
-    height: 36px;
+    width: 30px !important;
+    height: 30px !important;
   }
   
-  /* Better stats cards on mobile */
+  /* Stats grid - 2 columns */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+  }
+  
   .stats-card {
-    padding: 1rem;
+    padding: 10px !important;
   }
   
   .stats-icon {
-    width: 45px;
-    height: 45px;
+    width: 35px !important;
+    height: 35px !important;
   }
   
   .stats-value {
-    font-size: 1.5rem;
+    font-size: 1.2rem !important;
   }
   
-  /* Better timer on mobile */
+  .stats-info h3 {
+    font-size: 0.7rem !important;
+  }
+  
+  /* Dashboard grid - 1 column */
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  
+  /* Timer */
   .timer-circle {
-    width: 180px;
-    height: 180px;
+    width: 140px !important;
+    height: 140px !important;
   }
   
   .timer-time {
-    font-size: 2rem;
+    font-size: 1.3rem !important;
+  }
+  
+  .page-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .settings-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .name-input-group {
+    flex-direction: column !important;
+  }
+  
+  .save-name-btn {
+    width: 100% !important;
+    justify-content: center !important;
   }
 }
 
 /* Very small phones */
 @media (max-width: 480px) {
-  .welcome-text h1 {
-    font-size: 1rem;
-  }
-  
-  .welcome-text p {
-    font-size: 0.75rem;
-  }
-  
-  .stats-grid {
-    gap: 0.75rem;
-  }
-}
-/* ============================================ */
-/* PHONE SCREEN FIX - No Horizontal Scroll */
-/* ============================================ */
-
-@media (max-width: 768px) {
-  .page-container {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-    padding: 0 8px;
-    margin-top: 8px !important;
-    margin: auto;
-  }
-  
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-  }
-  
-  .stats-card {
-    padding: 10px;
-  }
-  
-  .stats-value {
-    font-size: 1.3rem;
-  }
-  
-  .stats-icon {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .dashboard-grid {
-    gap: 12px;
-  }
-  
-  .progress-container, .timer-container {
-    padding: 12px;
-  }
-  
   .welcome-banner {
-    padding: 12px;
+    margin-left: 35px !important;
   }
   
   .welcome-text h1 {
-    font-size: 1.1rem;
-    color: rgb(210, 81, 102);
-  }
-  
-  .task-card {
-    padding: 10px;
-  }
-  
-  .task-title {
-    font-size: 0.9rem;
-  }
-  
-  .settings-card {
-    padding: 12px;
-  }
-  
-  .timer-circle {
-    width: 160px;
-    height: 160px;
-  }
-  
-  .timer-time {
-    font-size: 1.8rem;
-  }
-}
-/* Add this to fix welcome banner positioning */
-.welcome-banner {
-  position: relative;
-  z-index: 1;
-  margin-top: 0;
-}
-
-@media (max-width: 768px) {
-  .page-container {
-    margin-top: 0;
-    padding-top: 0;
-  }
-  
-  .welcome-banner {
-    margin-top: 0;
-    position: relative;
-    top: 0;
-  }
-}
-/* ============================================ */
-/* FIX: Welcome banner position - No floating */
-/* ============================================ */
-
-.welcome-banner {
-  position: relative;
-  margin-top: 0;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .welcome-banner {
-    margin-top: 0;
-    margin-bottom: 16px;
-    position: relative;
-    top: 0;
-  }
-  
-  .page-container {
-    margin-top: 0;
-    padding-top: 0;
-  }
-  
-  /* First element in page should not have extra margin */
-  .page-container > *:first-child {
-    margin-top: 0;
-  }
-}
-/* ============================================ */
-/* CRITICAL FIX: Welcome banner positioning */
-/* ============================================ */
-
-@media (max-width: 768px) {
-  .welcome-banner {
-    margin-top: 0 !important;
-    position: relative !important;
-    top: auto !important;
-  }
-  
-  .page-container {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-  }
-}
-/* ============================================ */
-/* FINAL MOBILE POLISH FOR PAGES */
-/* ============================================ */
-
-@media (max-width: 768px) {
-  .page-title {
-    font-size: 1.3rem !important;
-    margin-bottom: 1rem !important;
-  }
-  
-  .page-subtitle {
-    font-size: 0.8rem !important;
-  }
-  
-  .settings-card h3 {
     font-size: 1rem !important;
   }
   
-  .settings-content label {
-    font-size: 0.8rem !important;
+  .stats-grid {
+    gap: 6px !important;
   }
   
-  .settings-input {
-    padding: 8px !important;
-    font-size: 0.8rem !important;
+  .stats-card {
+    padding: 6px !important;
   }
   
-  .save-name-btn {
-    padding: 8px 16px !important;
-    font-size: 0.8rem !important;
-  }
-  
-  .encouragement-card h3 {
-    font-size: 0.9rem !important;
-  }
-  
-  .encouragement-card p {
-    font-size: 0.75rem !important;
+  .stats-value {
+    font-size: 1rem !important;
   }
 }

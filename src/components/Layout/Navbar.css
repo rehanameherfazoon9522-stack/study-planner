@@ -151,4 +151,19 @@
   .navbar {
     position: sticky;
   }
+} 
+/* When sidebar is open on mobile, hide navbar content */
+@media (max-width: 768px) {
+  body.sidebar-open .navbar .welcome-section,
+  body.sidebar-open .navbar .nav-actions {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  
+  /* Keep navbar background but hide content */
+  body.sidebar-open .navbar {
+    background: transparent;
+    box-shadow: none;
+  }
 }

@@ -30,21 +30,27 @@ const Sidebar = () => {
   ];
 
   const toggleMenu = () => {
-    setIsMobileOpen(!isMobileOpen);
+    const newState = !isMobileOpen;
+    setIsMobileOpen(newState);
+    
+    if (newState) {
+      document.body.classList.add('sidebar-open');
+    } else {
+      document.body.classList.remove('sidebar-open');
+    }
   };
 
   const closeMenu = () => {
     setIsMobileOpen(false);
+    document.body.classList.remove('sidebar-open');
   };
 
   return (
     <>
-      {/* Mobile menu button - only shows on phones */}
       <button className="mobile-menu-btn" onClick={toggleMenu}>
         {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
       </button>
       
-      {/* Sidebar - slides in on mobile */}
       <div className={`sidebar ${isMobileOpen ? 'mobile-open' : ''}`}>
         <div className="sidebar-header">
           <div className="logo-container">
@@ -74,7 +80,6 @@ const Sidebar = () => {
         </div>
       </div>
       
-      {/* Overlay - blurs background only, NOT the sidebar */}
       {isMobileOpen && <div className="mobile-overlay" onClick={closeMenu} />}
     </>
   );

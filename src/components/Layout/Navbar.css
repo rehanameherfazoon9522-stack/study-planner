@@ -6,7 +6,7 @@
   align-items: center;
   border-bottom: 2px solid var(--border);
   backdrop-filter: blur(10px);
-  position: sticky;
+  position: relative !important;
   top: 0;
   z-index: auto !important;
   gap: 1rem;
@@ -101,7 +101,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-    position: relative;
+    position: relative !important;
     padding: 10px 16px 7px 45px;
     flex-direction: row;
     justify-content: space-between;
@@ -163,6 +163,6 @@
 /* LAPTOP STYLES - No change */
 @media (min-width: 769px) {
   .navbar {
-    position: sticky;
+    position: relative !important;
   }
 }
